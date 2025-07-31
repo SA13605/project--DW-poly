@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        .frontpage{
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .login{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: rgb(123, 144, 151);
+        }
+
+        .loginFr{
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            width: 60%;
+            height: 80%;
+            border-radius: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #0a0000;
+        }
+
+        .loginPageImg{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: #76C3BF;
+        }
+
+        .loginPageImg img{
+            position: absolute;
+            top: 25%;
+            right: 20%;
+            width: 60%;
+            height: 70%;
+            border-radius: 30%;
+        }
+
+        .ih1{
+            text-align: center;
+            font-size: 440%;
+        }
+
+        .iih1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="frontpage">
+        <div class="login">
+            <div class="loginFr">
+                <h1>Login</h1>
+            <p>Hey enter your to sign into your account</p>
+
+            <div class="google-signin">
+            <img src="../../../group project/project--DW-poly/mainfile/accets/google-brands-solid-full.svg" alt="">
+            <span>Sign in with Google</span>
+            </div>
+
+            <p class="email-signin">or sign in with Email</p>
+
+            <input type="text" placeholder="Enter your username" />
+            <input type="password" placeholder="Enter your password" />
+            <div style="text-align: right; margin-bottom: 10px;">
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button class="login-button">Login</button>
+
+            <p class="register-link">Not registered yet? <a href="#">Create an
+                    account</a></p>
+            </div>
+        </div>
+        
+        <div class="loginPageImg">
+            <h1 class="ih1">WELCOME TO</h1>
+            <h1 class="iih1">ROOMMATEY</h1>
+            <img src="accets/img1.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
