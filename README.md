@@ -9,7 +9,7 @@ and user can search /view the rooms.
 
 <h3>key Features</h3>
 <h4>For oweners </h4>
-Add update and delete optins <br>
+    Add/update and delete optins <br>
 
 . title <br>
 . price <br>
