@@ -14,10 +14,11 @@ body{
     margin: 0%;
     width: 100%;
     height: 3vw;
-    position: sticky;
+    display: block;
+    position: fixed;
     top: 0%;
     z-index: 100;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
 }
 
@@ -61,7 +62,7 @@ body{
     left: 12%;
     top: 10%;
     font-size: 2vw;
-    color: rgb(149, 87, 255);
+    color: #7152C7;
 }
 
 .searchbar {
@@ -123,6 +124,34 @@ body{
     width: 100%;
     height: 100%;
     color: rgb(0, 0, 0);
+    border-radius: 12px;
+    border: none;
+}
+
+/* wishList */
+.showWishList{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 5%;
+    right: 0%;
+    width: 35%;
+    height: 95vh;
+    background-color: #ffffff;
+    border-radius: 32px 0px 0px 32px;
+}
+
+/* profile */
+.showProfile{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 5%;
+    right: 0%;
+    width: 35%;
+    height: 95vh;
+    background-color: #ffffff;
+    border-radius: 32px 0px 0px 32px;
 }
 
 
@@ -131,12 +160,13 @@ body{
 .menu{
     width: 20%;
     height: 44.5vw;
-    border-radius: 0px 16px 18px 0px;
-    position: sticky;
-    top:0%;
+    border-radius: 0px 32px 32px 0px;
+    position: fixed;
+    top:5%;
     left:0%;
-    background-color: rgb(112, 106, 106);
-    z-index: 90;
+    background-color: #ffffff;
+    color: #000000;
+    z-index: 99;
     display: none;
        /* display: none;   Initially hidden */
 }
@@ -152,7 +182,7 @@ body{
     width: 100%;
     height: 5vh;
     background-color: inherit;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
     text-align: left;
     padding-left: 10px;
@@ -180,10 +210,10 @@ body{
 
 
 .area{
-    position: absolute;
-    top: 0%;
+    position: relative;
+    top: 5%;
     left: 0%;
-    background: oklab(47.958% 0.13004 -0.12739 / 0.737);  
+    background:#ffffff;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
     height:95vh;
@@ -305,19 +335,29 @@ body{
     }
 
 }
-
+/* ------- */
 .hiroHeding{
     position: absolute;
     background-color: #846b1e;
-    top: 15%;
+    top: 10%;
     left: 5%;
-    width: 35vw;
-    height: 25vw;
+    width: 60vw;
+    height: 30vw;
     border-radius: 32px;
 }
 
+.back{
+position: absolute;
+top: 0;
+right: 0%;
+width: 50vh;
+height: 100vh;
+z-index: 99;
+background-color: #7152C7;
+}
+
 .hiroSpan1{
-    font-size: 3vw;
+    font-size: 6vw;
     margin: 3vw 2vw;
     display: block;
     font-weight: bold;
@@ -352,6 +392,7 @@ body{
     border-radius: 16px;
     overflow: hidden;
     background-color: #b33d3d;
+    display: none;
 }
 
 
