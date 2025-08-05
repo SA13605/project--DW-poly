@@ -1,6 +1,6 @@
 this repo is created for team work and project building
 <br>
-<h1>Rooms searching and Room Listing  Website </h1>
+<h1>Room searching and Listing  Website </h1>
 
 
 <h3>1.purpose</h3>
