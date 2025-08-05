@@ -19,7 +19,6 @@ and user can search /view the rooms.
 . other details <br>
 . imges <br>
 
-<br>
 <h4>For user</h4>
 search and view the room details.
     
