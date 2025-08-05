@@ -9,14 +9,15 @@ and user can search /view the rooms.
 
 <h3>key Features</h3>
 <h4>For oweners </h4>
-Add update and delete optins
-. title
-. price
-. location
-. Room type
-. oweners contact
-. other details
-. imges
+Add update and delete optins <br>
+
+. title <br>
+. price <br>
+. location <br>
+. Room type <br>
+. oweners contact <br>
+. other details <br>
+. imges <br>
 
 <br>
 <h4>For user</h4>
