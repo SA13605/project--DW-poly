@@ -9,7 +9,7 @@ and user can search /view the rooms.
 
 <h3>key Features</h3>
 <h4>For oweners </h4>
-    Add/update and delete optins <br>
+    Add/update and delete options <br>
 
 . title <br>
 . price <br>
@@ -17,7 +17,7 @@ and user can search /view the rooms.
 . Room type <br>
 . oweners contact <br>
 . other details <br>
-. imges <br>
+. images <br>
 
 <h4>For user</h4>
 search and view the room details.
