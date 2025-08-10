@@ -1,0 +1,47 @@
+.menuBar{
+    display: block;
+    position: fixed;
+    top: 8%;
+    right: 0%;
+    width: 20vw;
+    height: 95%;
+    background-color:#b4c5e4;
+    caret-color: transparent;
+}
+
+.heding{
+    font-size: 32px;
+    text-align: center;
+    color: #172549;
+}
+
+.menuBar> .home{
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.menuBar>.category{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.menuBar>span{
+    display: block;
+    font-size: 24px;
+    color: #172549;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+span>img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.menuBar span:hover{
+    background-color: #3066be;
+    width: fit-content;
+    border-radius: 12px;
+    padding: 5px 15px;
+}

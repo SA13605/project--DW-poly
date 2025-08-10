@@ -1,0 +1,74 @@
+.showProfile{
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 20%;
+    height: fit-content;
+    background-color:  #b4c5e4;
+    border-radius: 32px 32px 32px 32px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    caret-color: transparent;
+    overflow: hidden;
+}
+
+.profileImg{
+    display: block;
+    width: 90%;
+    height: 25vh;
+    margin: 5% 5%;
+    border-radius: 16px;
+    background-color: #d4e2e5;
+}
+
+.profilePic{
+    margin-top: 15%;
+    margin-left: 40%;
+    width: 20%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.profileName{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.profileEmail{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.profileInfo > h5{
+    margin-left: 10px;
+}
+
+.profileInfo >p{
+    margin-left: 25px;
+}
+
+.mangeRoomBtn{
+    width: 60%;
+    margin: 10px 10% 10px 18%;
+    color: rgb(255, 255, 255);
+    background-color:  #172549;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+}
+
+.addRoomBtn{
+    width: 60%;
+    margin: 10px 10% 50px 18%;
+    color: rgb(255, 255, 255);
+    background-color:  #172549;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+}
+
+/* for owner additional fetcher */
+.forOwner{
+    display: initial;
+}
