@@ -28,10 +28,11 @@
         }
 
         .Foget-password-container {
-            background-color: #ffffffc1;
+            background-color: #70dafa5c;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 2px solid #538fcf;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
             text-align: center;
@@ -50,12 +51,20 @@
 
         input[type="text"],
         input[type="password"] {
+            background-color: #31d4e020;
+            color: #000000;
+            border: 2px solid #000000;
             width: 80%;
             padding: 10px;
             margin-bottom: 10%;
-            border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 14px;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #000000;
+            font-size: 20px;
         }
 
         .confirm-button {
@@ -79,7 +88,7 @@
 </head>
 
 <body>
-    <img src="accets/bgimg.png" alt="">
+    <img src="accets/loginbg2.jpg" alt="">
 
     <div class="Foget-password-container">
         <h1>Forget password</h1>
