@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomMate</title>
+    <link rel="stylesheet" href="./styles/rooms.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+        }
+
+
+        /* search bar */
+        .searchBar {
+            width: 100vw;
+            height: 7.5vh;
+            background-color: #3b3a3a;
+            display: flex;
+            position: sticky;
+            top: 0%;
+            z-index: 100;
+        }
+
+        .searchBar>p {
+            font-size: 300%;
+            font-weight: bolder;
+            color: white;
+            margin-left: 2.5vw;
+            margin-top: 0px;
+        }
+
+        .searchBar>input {
+            width: 32.5vw;
+            height: 5vh;
+            border: 1px solid black;
+            border-radius: 12px;
+            margin-left: 12.5vw;
+            margin-top: 1vh;
+            padding-left: 2.5vw;
+        }
+
+        .searchBar>input::placeholder {
+            text-align: justify;
+            left: 20%;
+        }
+
+
+        .searchBar>button {
+            width: 5vw;
+            height: 5vh;
+            margin-top: 1vh;
+            margin-left: 27.5vw;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* menu bar */
+        .hed {
+            width: 100vw;
+            height: 7.5vh;
+            background-color: #898887;
+            display: flex;
+            caret-color: transparent;
+        }
+
+        .hed>.i1 {
+            margin-left: 2.5vw;
+        }
+
+        .hed>ul {
+            display: flex;
+            font-size: 150%;
+            list-style: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin-left: 8vw;
+            margin-top: 1.5vh;
+        }
+
+        .hed>ul>li {
+            margin-left: 10vw;
+        }
+
+        .hed>.i2 {
+            margin-left: 17.5vw;
+        }
+
+
+        /* hero sec */
+        .hero {
+            width: 100vw;
+            height: 86vh;
+            position: relative;
+        }
+
+        .hero>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero>.cover {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 85vh;
+            background-color: #4a49499d;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            /* keep content centered like your screenshot */
+            padding: 20px 0;
+        }
+
+
+        /* =================== */
+        .rooms,
+        .roomex {
+            width: 90vw;
+            height: fit-content;
+            margin: 10vh 5vw;
+            /* background-color: #ec2a2a; */
+
+            display: grid;
+            grid-template-columns: 20vw 20vw 20vw 20vw;
+            gap: 2.5vw;
+        }
+
+
+        .added::-webkit-scrollbar {
+            display: none;
+        }
+
+        .addedRoomCard {
+            position: relative;
+            width: 20vw;
+            height: 65vh;
+            border-radius: 16px;
+            background-color: #e2e2e2;
+            overflow: hidden;
+            border: 2px solid black;
+            box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.55);
+        }
+
+
+        .addedRoomCardImg {
+            width: 20vw;
+            height: 35vh;
+        }
+
+        .Roomlocation {
+            margin-top: 2vh;
+            margin-left: 2vw;
+            font-size: 2.5vh;
+        }
+
+        .RoomCardRoomType {
+            margin-top: 2vh;
+            margin-left: 2vw;
+            font-size: 2.5vh;
+        }
+
+        .roomCardRoomRent {
+            margin-top: 2vh;
+            margin-left: 2vw;
+            font-size: 2.5vh;
+        }
+
+        .roomCardMoreBtn {
+            position: absolute;
+            top: 55vh;
+            left: 6vw;
+            z-index: 10;
+            padding: 1.5vh 1.5vw;
+            border-radius: 16px;
+            background-color: #172549;
+            color: white;
+        }
+
+
+        /* about */
+
+        .aboutSec {
+            width: 100vw;
+            height: 100vh;
+            margin-top: 10vh;
+            background-color: gray;
+            color: rgb(255, 255, 255);
+            display: flex;
+        }
+
+        .col1 {
+            width: 40vw;
+            height: 90vh;
+            margin: 2.5vh 0vw 2.5vh 5vw;
+            padding: 2.5vh 1.5vw;
+            /* background-color: #fff; */
+        }
+
+        .col2 {
+            width: 40vw;
+            height: 90vh;
+            margin: 2.5vh 2.5vw 2.5vh 0vw;
+            padding: 2.5vh 1.5vw;
+            /* background-color: #fff; */
+        }
+
+        .c1_r1 {
+            position: relative;
+            display: flex;
+            width: 35vw;
+            height: 35vh;
+            padding: 2.5vh 2.5vw;
+            border: 2px solid #000;
+        }
+
+
+        .c1_1 {
+            position: absolute;
+            width: 20vw;
+            height: 30vh;
+            padding-top: 0vh;
+            border-right: 1px solid #000;
+        }
+
+        .c1_1>p {
+            font-size: 500%;
+            text-align: center;
+            margin: 0px;
+        }
+
+        .c1_2 {
+            position: absolute;
+            right: 0%;
+            width: 20vw;
+            height: 40vh;
+        }
+
+        .c1_2>p {
+            font-size: 24px;
+            margin-top: 2vh;
+            margin-bottom: 4vh;
+            margin-left: 5vw;
+            color: #0A223D;
+
+        }
+
+        .c1_2>ul>li {
+            font-size: 20px;
+            list-style: none;
+            font-style: 20px;
+            margin-bottom: 1vh;
+            margin-left: 5vw;
+        }
+
+        .c1_r2 {
+            /* margin-top: 4vh;
+    width: 40vw;
+    height: 40vh;
+    text-align: left;
+    border: 2px solid black; */
+            margin-top: 5vh;
+            width: 35vw;
+            height: 35vh;
+            border: 2px solid black;
+            padding: 2.5vh 2.5vw;
+        }
+
+        .c1_r2>p {
+            margin-left: 5vw;
+            margin-top: 2vh;
+            font-size: 20px;
+        }
+
+        .c1_r2>.p3>img,
+        .c1_r2>.p4>img,
+        .c1_r2>.p5>img {
+            width: 2vw;
+            height: 2vh;
+            margin-right: 2vh;
+        }
+
+        .c1_r2>.p4 {
+            display: flex;
+            margin-left: 5vw;
+            margin-top: 2vh;
+        }
+
+        .c1_r2>.p1 {
+            font-size: 24px;
+            color: #0A223D;
+        }
+
+        .c2_r1 {
+            display: flex;
+            width: 35vw;
+            height: 35vh;
+            padding: 2.5vh 2.5vw;
+            border: 2px solid #000;
+            /* background-color: #ed8433; */
+        }
+
+        .c2_1>p {
+            text-align: left;
+            font-size: 16px;
+            color: #0A223D;
+        }
+
+        .c2_1>ul>li {
+            list-style: none;
+            margin: 1vh;
+        }
+
+
+        .c2_2 {
+            padding-left: 5vw;
+            border-left: 1px solid #000;
+        }
+
+        .c2_2>p {
+            color: #0A223D;
+            font-size: 16px;
+        }
+
+        .c2_2>ul>li {
+            list-style: none;
+            margin: 1vh;
+        }
+
+        .c2_3 {
+            margin-left: 2.5vw;
+            width: 10vw;
+            border-left: 1px solid #0A223D;
+            padding-left: 1vw;
+            /* background-color: #fff; */
+        }
+
+        .c2_3>p {
+            color: #0A223D;
+        }
+
+        .c2_3>img {
+            margin-top: 2.5vh;
+            width: 2.5vw;
+            height: 2.5vh;
+        }
+
+        .c2_r2 {
+            margin-top: 5vh;
+            width: 35vw;
+            height: 35vh;
+            border: 2px solid black;
+            padding: 2.5vh 2.5vw;
+        }
+
+        .c2_r2>.p1 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #0A223D;
+        }
+
+        .c2_r2>.inp1 {
+            margin-top: 2.5vw;
+            margin-right: 2vw;
+            width: 15vw;
+            height: 5vh;
+        }
+
+        .c2_r2>.inp2 {
+            width: 15vw;
+            height: 5vh;
+        }
+
+        .c2_r2>.inp3 {
+            margin-top: 2.5vh;
+            width: 32.5vw;
+            height: 5vh;
+        }
+
+        .c2_r2>button {
+            display: block;
+            margin-top: 2.5vh;
+            padding: 10px 20px;
+            background-color: #0A223D;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- search bar -->
+    <div class="searchBar">
+        <p>Room<span style="color: #08315e;">Matey</span></p>
+        <input type="text" placeholder="search" id="searchText">
+        <button id="searchBtn" style="position: absolute; left: 38vw;top: 0.25vh;border-radius: 16px;">Search</button>
+        <button id="loginBtn">Login</button>
+    </div>
+
+    <!-- menu bar -->
+    <div class="hed">
+        <a href="./menu.html" class="i1">
+            <img src="../accets/icons/icons8-menu-bar-50.png" alt="">
+        </a>
+        <ul>
+            <li class="home">Home</li>
+            <li class="room"
+                style="background-color: #08315e;padding: 0vh 1vw;margin-bottom: 3vh;border-radius: 16px;width: 4vw;height: 4vh;">
+                Rooms</li>
+            <li class="contact">Contact</li>
+            <li class="about">About</li>
+        </ul>
+        <a href="./profile.html" class="i2">
+            <img src="../accets/icons/icons8-user-50.png" alt=""> <!--profile-->
+        </a>
+    </div>
+
+
+    <!-- hero sec -->
+    <div class="hero">
+        <img src="../accets/hiro.jpg" alt="">
+        <div class="cover"></div>
+        <p style="font-size: 600%;text-align: center;position: absolute;top: 20vh;left: 35vw;font-weight: bolder;">Find
+            Rooms</p>
+    </div>
+
+    <!-- rooms -->
+    <div class="rooms">
+
+    </div>
+
+
+    <div class="roomex">
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room1.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHIVIRTH NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room2.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDIVIDUAL HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">individual House for rent</div>
+                <div class="location">📍 <span>Asarjan, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room3.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">1 BHK FALATS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bhk flats for rent</div>
+                <div class="location">📍 <span>hingolo naka, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room4.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">Krushna NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room5.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHAM NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom 2 Hall House for rent</div>
+                <div class="location">📍 <span>vishnupuri, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room6.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDEPENDENT HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">2 bedroom House for rent</div>
+                <div class="location">📍 <span>kabra nagar, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room7.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">VISAWA PALACE NANDED</div>
+                <div class="rating">★★★★</div>
+                <div class="desc">Independent palace</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+
+         <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room1.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHIVIRTH NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room2.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDIVIDUAL HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">individual House for rent</div>
+                <div class="location">📍 <span>Asarjan, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room3.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">1 BHK FALATS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bhk flats for rent</div>
+                <div class="location">📍 <span>hingolo naka, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room4.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">Krushna NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room5.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHAM NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom 2 Hall House for rent</div>
+                <div class="location">📍 <span>vishnupuri, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room6.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDEPENDENT HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">2 bedroom House for rent</div>
+                <div class="location">📍 <span>kabra nagar, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room7.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">VISAWA PALACE NANDED</div>
+                <div class="rating">★★★★</div>
+                <div class="desc">Independent palace</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+
+         <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room1.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHIVIRTH NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room2.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDIVIDUAL HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">individual House for rent</div>
+                <div class="location">📍 <span>Asarjan, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room3.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">1 BHK FALATS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bhk flats for rent</div>
+                <div class="location">📍 <span>hingolo naka, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room4.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">Krushna NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room5.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHAM NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom 2 Hall House for rent</div>
+                <div class="location">📍 <span>vishnupuri, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room6.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDEPENDENT HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">2 bedroom House for rent</div>
+                <div class="location">📍 <span>kabra nagar, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room7.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">VISAWA PALACE NANDED</div>
+                <div class="rating">★★★★</div>
+                <div class="desc">Independent palace</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+
+         <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room1.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHIVIRTH NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room2.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDIVIDUAL HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">individual House for rent</div>
+                <div class="location">📍 <span>Asarjan, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room3.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">1 BHK FALATS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bhk flats for rent</div>
+                <div class="location">📍 <span>hingolo naka, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room4.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">Krushna NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room5.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHAM NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom 2 Hall House for rent</div>
+                <div class="location">📍 <span>vishnupuri, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room6.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDEPENDENT HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">2 bedroom House for rent</div>
+                <div class="location">📍 <span>kabra nagar, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room7.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">VISAWA PALACE NANDED</div>
+                <div class="rating">★★★★</div>
+                <div class="desc">Independent palace</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+
+         <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room1.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHIVIRTH NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room2.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDIVIDUAL HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">individual House for rent</div>
+                <div class="location">📍 <span>Asarjan, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room3.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">1 BHK FALATS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bhk flats for rent</div>
+                <div class="location">📍 <span>hingolo naka, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room4.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">Krushna NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom House for rent</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room5.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">SHAM NIVAS</div>
+                <div class="rating">★★</div>
+                <div class="desc">1 bedroom 2 Hall House for rent</div>
+                <div class="location">📍 <span>vishnupuri, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room6.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">INDEPENDENT HOUSE</div>
+                <div class="rating">★★</div>
+                <div class="desc">2 bedroom House for rent</div>
+                <div class="location">📍 <span>kabra nagar, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-wrapper">
+                <img src="../accets/rooms/room7.jpg" alt="Room Image">
+                <div class="heart">♡</div>
+            </div>
+            <div class="card-content">
+                <div class="title">VISAWA PALACE NANDED</div>
+                <div class="rating">★★★★</div>
+                <div class="desc">Independent palace</div>
+                <div class="location">📍 <span>PushpNager, Nanded</span></div>
+            </div>
+            <div class="footer">
+                <p>see more Details</p>
+                <a href="./roomDetails.html" class="btn">See Details</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- about sec -->
+    <!-- sec About -->
+    <div class="aboutSec">
+        <div class="col1">
+
+            <div class="c1_r1">
+                <div class="c1_1">
+                    <p>Room</p>
+                    <p style="color: #0A223D;">Matey</p>
+                </div>
+                <div class="c1_2">
+                    <p>ALL CATEGORIES</p>
+                    <ul>
+                        <li>All Deals</li>
+                        <li>Rooms</li>
+                        <li>Homes</li>
+                        <li>Rent Rooms</li>
+                        <li>1BHK</li>
+                        <li>Apartments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="c1_r2">
+                <p class="p1">Contact details</p>
+                <p class="p2">Feel free to contact us by phone, email or by our contact form</p>
+                <p class="p3"><img src="../accets/icons/icons8-location-24.png" alt="">Nanded..</p>
+                <div class="p4">
+                    <img src="../accets/icons/icons8-call-50.png" alt="tel">
+                    <p>
+                        Tel (business hours) : 269 1500 <br>
+                        Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
+                        Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                    </p>
+                </div>
+                <p class="p5"><img src="../accets/icons/icons8-email-50.png" alt="">RoomMatey@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="col2">
+            <div class="c2_r1">
+                <div class="c2_1">
+                    <p>ADDITIONAL INFORMATION</p>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>How does it work?</li>
+                        <li>Asked Questions</li>
+                        <li>Deals</li>
+                    </ul>
+                </div>
+                <div class="c2_2">
+                    <p>LEAGAL INFORMATION</p>
+                    <ul>
+                        <li>Terms & Conditions</li>
+                        <li>Disclaimer</li>
+                        <li>Cancellation policy</li>
+                        <li>Asked Questions</li>
+                    </ul>
+                </div>
+                <div class="c2_3">
+                    <p>SOCIAL NETWORK</p>
+                    <img src="../accets/icons/icons8-facebook-50.png" alt="">
+                    <img src="../accets/icons/icons8-instagram-50.png" alt="">
+                    <img src="../accets/icons/icons8-linkedin-50.png" alt="">
+                </div>
+            </div>
+
+            <div class="c2_r2">
+                <p class="p1">SEND US A MESSAGE</p>
+                <input type="text" class="inp1" placeholder="Your Full Name">
+                <input type="text" class="inp2" placeholder="Phone NO.">
+                <input type="text" class="inp3" placeholder="Message">
+                <button>Send</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+
+    <script src="./script/LoginBTN.js" type="module"></script>
+    <script src="./script/navigation.js" type="module"></script>
+    <script src="./script/rooms.js" type="module"></script>
+    <script src="./script/search.js" type="module"></script>
+    <script src="./script/call.js" type="module"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="./styles/profile.css">
+</head>
+
+<body>
+    <!-- search bar -->
+    <div class="searchBar">
+        <p>Room<span style="color: #08315e;">Matey</span></p>
+        <input type="text" placeholder="search" id="searchText">
+        <button id="searchBtn" style="position: absolute; left: 38vw;top: 0.25vh;border-radius: 16px;">Search</button>
+        <button onclick="window.location.href='home.html'"><img src="../accets/icons/back.png" alt=""></button>
+    </div>
+
+    <!-- hero sec -->
+    <div id="hero">
+        <img src="../accets/bg/bg for profile.avif" alt="" id="bgImg">
+        <div class="heroP">
+            <img src="../accets/profileImg.jpeg" alt="" id="pImg">
+        </div>
+    </div>
+
+    <!-- mainSEc -->
+    <div id="loginRec" style="display: none;"> <!-- if user is not logged -->
+        <div class="recBox">
+            <p>Please login to your account</p>
+            <button id="btnLogin">Login</button>
+        </div>
+    </div>
+
+    <div style="width: 100vw; height:72.5vh; background-color: rgb(177, 165, 165); position:relative;" id="mainSec">
+        <!-- user profile -->
+        <div class="showProfile">
+            <div class="profileImgSec">
+                <img src="../accets/profileImg.jpeg" alt="img" class="profilePic" />
+                <p class="profileName"></p>
+                <div class="chengeBtns">
+                    <input type="file" accept="img/*" style="display: none;" id="inputProfilePic">
+                </div>
+            </div>
+            <div class="profileInfo">
+                <h4>User Data</h4>
+                <br>
+                <p style="font-size: 20px;">User ID:<span id="userId">Sam@786</span></p>
+                <br>
+                <p style="font-size: 20px;">User Name: <span id="name"></span></p>
+                <br>
+                <p style="font-size: 20px;">Email:- <span id="email"></span></p>
+            </div>
+        </div>
+
+        <!-- sec1 -->
+
+        <div class="sec1">
+            <!-- optin bar add added update delete -->
+            <div class="option">
+                <ul>
+                    <li id="btnAddNew">Add New</li>
+                    <li id="btnAdded">Added</li>
+                    <li id="btnUpdate">Update</li>
+                    <li id="btnDelete">Delete</li>
+                </ul>
+                <hr>
+            </div>
+
+
+            <!-- add new room optin -->
+            <div class="addNew">
+                <button onclick="window.location.href='propertyFrom1.html'">
+                    <img src="../accets/icons/icons8-add-50.png" alt="">
+                </button>
+                <p>Add New Room</p>
+            </div>
+
+            <!-- added rooms -->
+            <div class="added">
+
+            </div>
+            <!-- update -->
+            <div class="update">
+
+                <div id="updateBox">
+                    <div class="Uconfirm-box">
+                        <h3 id="Utext">Are You Shure! Your Room is Currently Not Available?</h3>
+                        <button id="Ubtn-yes">Yes</button>
+                        <button id="Ubtn-no">No</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- delete -->
+            <div class="delete">
+                <div id="logoutConfirm">
+                    <div class="confirm-box">
+                        <h3>Are you sure you want to Delete Your Room?</h3>
+                        <button id="btn-yes">Yes</button>
+                        <button id="btn-no">No</button>
+                    </div>
+                </div>
+                
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- about -->
+    <div class="aboutSec">
+        <div class="col1">
+
+            <div class="c1_r1">
+                <div class="c1_1">
+                    <p>Room</p>
+                    <p style="color: #0A223D;">Matey</p>
+                </div>
+                <div class="c1_2">
+                    <p>ALL CATEGORIES</p>
+                    <ul>
+                        <li>All Deals</li>
+                        <li>Rooms</li>
+                        <li>Homes</li>
+                        <li>Rent Rooms</li>
+                        <li>1BHK</li>
+                        <li>Apartments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="c1_r2">
+                <p class="p1">Contact details</p>
+                <p class="p2">Feel free to contact us by phone, email or by our contact form</p>
+                <p class="p3"><img src="../accets/icons/icons8-location-24.png" alt="">Nanded..</p>
+                <div class="p4">
+                    <img src="../accets/icons/icons8-call-50.png" alt="tel">
+                    <p>
+                        Tel (business hours) : 269 1500 <br>
+                        Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
+                        Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                    </p>
+                </div>
+                <p class="p5"><img src="../accets/icons/icons8-email-50.png" alt="">RoomMatey@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="col2">
+            <div class="c2_r1">
+                <div class="c2_1">
+                    <p>ADDITIONAL INFORMATION</p>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>How does it work?</li>
+                        <li>Asked Questions</li>
+                        <li>Deals</li>
+                    </ul>
+                </div>
+                <div class="c2_2">
+                    <p>LEAGAL INFORMATION</p>
+                    <ul>
+                        <li>Terms & Conditions</li>
+                        <li>Disclaimer</li>
+                        <li>Cancellation policy</li>
+                        <li>Asked Questions</li>
+                    </ul>
+                </div>
+                <div class="c2_3">
+                    <p>SOCIAL NETWORK</p>
+                    <img src="../accets/icons/icons8-facebook-50.png" alt="">
+                    <img src="../accets/icons/icons8-instagram-50.png" alt="">
+                    <img src="../accets/icons/icons8-linkedin-50.png" alt="">
+                </div>
+            </div>
+
+            <div class="c2_r2">
+                <p class="p1">SEND US A MESSAGE</p>
+                <input type="text" class="inp1" placeholder="Your Full Name">
+                <input type="text" class="inp2" placeholder="Phone NO.">
+                <input type="text" class="inp3" placeholder="Message">
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../programs/script/profile.js" type="module"></script>
+    <script src="./script/roomDetails.js"> </script>
+</body>
+
+</html>

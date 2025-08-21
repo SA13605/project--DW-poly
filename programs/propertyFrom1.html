@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Your Room</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: #545353;
+        color: white;
+        padding: 1vh 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+      }
+
+      header h2 {
+        margin: 0;
+        color: #ffffff;
+      }
+
+      header nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      .container {
+        caret-color: transparent;
+        background-color: #fff;
+        padding: 5vh 5vw;
+        width: 50vw;
+        margin: 10vh auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.578);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 2.5vh;
+      }
+
+      p {
+        text-align: center;
+        margin-bottom: 5vh;
+        color: #666;
+      }
+
+      form label {
+        display: block;
+        margin: 2.5vh 0 1vw;
+        font-weight: bold;
+      }
+
+      input,
+      select,
+      textarea {
+        caret-color: black;
+        width: 95%;
+        padding: 1.5% 2.5%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .form-row {
+        display: flex;
+        width: 50vw;
+        padding: 2.5vh 0vw;
+        margin-top: 2.5vh;
+      }
+
+      .form-row>div {
+        width: 25vw;
+      }
+
+      textarea {
+        height: 5vw;
+        margin-bottom: 2.5vh;
+      }
+
+      .upload-box {
+        width: 50vw;
+        border: 2px dashed #aaa;
+        padding: 2.5vh 0vw;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        background: #fafafa;
+        cursor: pointer;
+      }
+
+      .upload-imgs {
+        display: flex;
+        gap: 15px;
+        margin: 2.5vh 0vw;
+      }
+
+      .upload-imgs div {
+        width: 15vw;
+        height: 5vh;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #aaa;
+      }
+
+      button {
+        display: block;
+        margin: 30px auto 0;
+        background: #0073e6;
+        color: #fff;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #005bb5;
+      }
+
+      .ownerData {
+        display: flex;
+        margin: 2.5vh 2.5vw;
+      }
+
+      .con{
+        background-color: #b0afaf;
+        border: 2px solid black;
+        border-radius: 16px;
+        width: 30vw;
+        height: 30vh;
+        position: fixed;
+        top: 20vh;
+        left: 32.5vw;
+        display: none;
+      }
+    </style>
+  </head>
+
+<body>
+  <header>
+    <h2>ROOM<span style="color: #005bb5">Matey</span></h2>
+    <nav><a href="#">Home</a><a href="#">Post a Room</a></nav>
+    <img src="../accets/icons/back.png" alt="" id="backBtn" style="width:2vw;position: absolute;top: .5vh;right: 1vw;">
+  </header>
+
+  <div class="container">
+    <h2>Post Your Room</h2>
+    <p>Fill out the below to add your room to the website</p>
+      
+    <form>
+        <!-- room data --> 
+        <h3>Room Details</h3>
+        <label>House Name</label>
+        <input type="text"
+          placeholder="sham Nivas"
+          id="roomdTitl"
+        /><br /><br />
+        
+        <div class="form-row">
+          <div>
+            <label>Owner Name:</label>
+            <input type="text" placeholder="enter name" id="ownerName" />
+          </div>
+          <div>
+            <label>Mo Noumber:</label>
+            <input type="text" placeholder="Mo.No"id="ownerMoNo" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Room Type</label>
+            <select>
+              <option id="roomType">Apartment</option>
+              <option id="roomType">Independent House</option>
+              <option id="roomType">Single Room</option>
+              <option id="roomType">Double Room</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Size in sq ft</label>
+            <input type="text" id="roomSize" placeholder="e.g. 450" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Rent per Month</label>
+            <input type="text" id="roomRent" placeholder="Rs. 10,000" />
+          </div>
+
+          <!-- facility -->
+          <div>
+            <label>Facilities</label>
+            <input type="text" id="roomFacility" placeholder="Attached Bathroom, Parking, Water Supply" />
+
+            <div style="display: flex;align-items: center;margin-top: 1vh;margin-left: 8vw;">
+              <img src="../accets/icons/icons8-add-50.png" alt="add"id="addFacility" />
+              <spanstyle="font-size: 20px; margin-top: 0vw">More+</span>
+            </div>
+
+          </div>
+        </div>
+        
+        <label>Description</label>
+        <textarea id="roomDescription"placeholder="A cozy 1-bedroom apartment with..."></textarea>
+
+        <!-- location -->
+        <h3>Location</h3>
+        <label>Address</label>
+        <input type="text" id="roomAdd"placeholder="Nanded..." />
+
+        <div class="form-row">
+          <div>
+            <label>City/State</label>
+            <input type="text" id="city" placeholder="Nanded, Maharashtra" />
+          </div>
+          
+          <div>
+            <label>Pin Code</label>
+            <input type="text" id="pinCode" placeholder="431601" />
+          </div>
+        </div>
+        
+        <label>Embed Map Link</label>
+        <input type="text" id="mapLink" placeholder="Upload Google Embed Map link" />
+        
+        <!-- photos -->
+        <h3>Upload Cover Photos</h3>
+        <div class="upload-box">Upload Front Cover Image<br /><br />
+          <input type="file" id="coverImg"value="Add img" style="width: 15vw" accept="image/*" />
+        </div>
+        
+        <!-- extra images -->
+        <span>You can Upload multiple extra images</span>
+        <div class="upload-imgs">
+          <div style="margin-top:2.5vh;">
+            <input type="file" id="extraIms" accept="image/*" />
+          </div>
+          <span style="align-content: center;margin-top: 2.5vh;" id="extraImsSpanText">
+              add Extra Images
+          </span>
+          
+          <!-- <div id="showIMGS" style="width: 25vw;height: 10vh;margin-top: 0vh;">
+          </div> -->
+
+        </div>
+        <button type="button" id="btnSubmit">Submit Room</button>
+    </form>
+
+  </div>
+  
+  <div class="con">
+    <p style="font-size: 20px;color: black;margin-top: 5vh;">Do You Want Upload This Room Data</p>
+    <div style="display: flex;margin-top: 10vh;">
+      <button type="button" class="btnOk">OK</button>
+      <button type="button" class="btnCancel" style="background-color: red;">Cancel</button>
+    </div>
+  </div>
+    
+    
+    
+    
+    
+    <script src="./script/roomData.js" type="module"></script>
+  </body>
+
+</html>
