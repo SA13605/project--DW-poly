@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/home.css" />
+    </head>
+<body>
+
+        <!-- search bar -->
+        <div class="searchBar">
+            <p>Room<span style="color: #08315e;">Matey</span></p>
+            <input type="text" placeholder="search" id="searchText">
+            <button id="searchBtn" style="position: absolute; left: 38vw;top: 0.25vh;border-radius: 16px;">Search</button>
+            <button id="loginBtn">Login</button>
+        </div>
+
+        <!-- menu bar -->
+        <div class="hed">
+            <a href="./menu.html" class="i1">
+                <img src="../accets/icons/icons8-menu-bar-50.png" alt="">
+            </a>
+            <ul>
+            <li class="home" style="background-color: #08315e;padding: 0vh 1vw;margin-bottom: 3vh;border-radius: 16px;width: 4vw;height: 4vh;">Home</li>
+            <li class="room">Rooms</li>
+            <li class="contact">
+                Contact
+            </li>
+            <li class="about">About</li>
+            </ul>
+            <a href="./profile.html" class="i2">
+                <img src="../accets/icons/icons8-user-50.png" alt=""> <!--profile--> 
+            </a>
+        </div>
+
+
+        <!-- hero sec -->
+        <div class="hero">
+            <img src="../accets/hiro.jpg" alt="">
+            <div class="cover"></div>
+            <div class="heroText">
+                <p class="p1">Book rooms Easily, Securely, and Stress-free.</p>
+                <p class="p2">Find Your Perfect Room, Instantly</p>
+                <p class="p3">⭐⭐⭐⭐⭐</p>
+                <button>Find Rooms</button>
+            </div>
+        </div>
+
+        <!-- sec 2 -->
+        <div class="productSec">
+            <div class="product" onclick="window.location.href=`./roomDetails.html`">
+                <img src="../accets/p1.jpg" alt="product" />
+                <p class="lable">New</p>
+                <div class="productInfo">
+                    <h1>Room</h1>
+                    <p>3 Rooms block</p>
+                    <p><img src="../accets/icons/location.png" alt=""> Nanded</p>
+                    <p><img src="../accets/icons/rent.png" style="width: 1vw;" alt=""> 7,500 per/month</p>
+                    <p class="readMore">
+                        Read More <img src="../accets/icons/right-up-arrow.png"
+                            alt="img" />
+                    </p>
+                </div>
+            </div>
+
+            <div class="product" onclick="window.location.href=`./roomDetails.html`">
+                <img src="../accets/p2.jpg" alt="product" />
+                <p class="lable">New</p>
+                <div class="productInfo">
+                    <h1>1 BHK</h1>
+                    <p>Standard Home</p>
+                    <p><img src="../accets/icons/location.png" alt="">Nanded</p>
+                    <p><img src="../accets/icons/rent.png" style="width: 1vw;" alt=""> 12,000 per/month</p>
+                    <p class="readMore">
+                        Read More <img src="../accets/icons/right-up-arrow.png"
+                            alt="img" />
+                    </p>
+                </div>
+            </div>
+
+            <div class="product" onclick="window.location.href=`./roomDetails.html`">
+                <img src="../accets/p3.png" alt="product" />
+                <p class="lable">New</p>
+                <div class="productInfo">
+                    <h1>Rent a Room</h1>
+                    <p>Standard Room</p>
+                    <p><img src="../accets/icons/location.png" alt="">Nanded</p>
+                    <p><img src="../accets/icons/rent.png" style="width: 1vw;" alt=""> 6,500 per/month</p>
+                    <p class="readMore">
+                        Read More <img src="../accets/icons/right-up-arrow.png"
+                            alt="img" />
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- sec 3 -->
+        <div class="productCollection">
+            <p style="font-size: 80px; text-align: center; margin: 2.5%">
+                Explore Rooms
+            </p>
+
+            <div class="row1">
+                <div class="firstP" onclick="window.location.href=`./roomDetails.html`">
+                    <div class="imgsec">
+                        <img src="../accets/p4.png" alt="img" />
+                    </div>
+                    <div class="firstP-info">
+                        <h2 class="title">2 BHK Independent Floor</h2>
+                        <p class="discription">
+                            This is a modern and stylish home available for
+                            affordable rent in
+                            Nanded. It is a 2 BHK Independent Floor situated at
+                            Nanded
+                            -Waghala .. Designed to meet your lifestyle needs,
+                            the independent
+                            Floor provides a range of modern amenities for the
+                            comfort of the
+                            residents.
+                        </p>
+
+                        <div>
+                            <div><img src="../accets/icons/area.png"
+                                    alt /></div>
+                            <div>
+                                <p>Built Area , Bathrooms & Balconies</p>
+                                <p id="hed">1200.0 sq.ft . 1 Bathrooms . 2
+                                    Balconies</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img
+                                    src="../accets/icons/icons8-furniture-50.png"
+                                    alt />
+                            </div>
+                            <div>
+                                <p>Furnishing</p>
+                                <p id="hed">Unfurnished</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div><img src="../accets/icons/rent.png"
+                                    alt /></div>
+                            <div>
+                                <p>Rent</p>
+                                <p class="rent" id="hed">₹ 10000.00/month</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img
+                                    src="../accets/icons/icons8-location-48.png"
+                                    alt />
+                            </div>
+                            <div>
+                                <p>Explore Ashtvinayk Nagar,Nanded</p>
+                                <p id="hed">Nanded, India</p>
+                            </div>
+                        </div>
+
+                        <div class="bookOption">
+                            <span class="rent">₹ 10,000.00</span>
+                            <button class="bookbtn">view Room</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secondP" onclick="window.location.href=`./roomDetails.html`">
+                    <img src="../accets/p5.jpg" alt="img" />
+                    <h2>Single Room</h2>
+                    <span><img src="../accets/icons/location.png"
+                            alt />Nanded</span>
+                    <span><img src="../accets/icons/icons8-person-24.png"
+                            alt />2 x
+                        Guests</span>
+                    <span><img src="../accets/icons/icons8-home-24.png"
+                            alt />single
+                        Room</span>
+
+                    <div class="bookOption">
+                        <span class="rent">₹ 3,000.00</span>
+                        <button class="bookbtn">View Room</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row2">
+                <div class="secondP" id="p1" onclick="window.location.href=`./roomDetails.html`">
+                    <img src="../accets/p6.png" alt="img" />
+                    <h2>Single Room</h2>
+                    <span><img src="../accets/icons/location.png"
+                            alt />Nanded</span>
+                    <span><img src="../accets/icons/icons8-person-24.png"
+                            alt />2 x
+                        Guests</span>
+                    <span><img src="../accets/icons/icons8-home-24.png"
+                            alt />single
+                        Room</span>
+
+                    <div class="bookOption">
+                        <span class="rent">₹ 3,000.00</span>
+                        <button class="bookbtn">View Room</button>
+                    </div>
+                </div>
+
+                <div class="secondP" id="p2" onclick="window.location.href=`./roomDetails.html`">
+                    <img src="../accets/p7.png" alt="img" />
+                    <h2>Single Room</h2>
+                    <span><img src="../accets/icons/location.png"
+                            alt />Nanded</span>
+                    <span><img src="../accets/icons/icons8-person-24.png"
+                            alt />2 x
+                        Guests</span>
+                    <span><img src="../accets/icons/icons8-home-24.png"
+                            alt />single
+                        Room</span>
+
+                    <div class="bookOption">
+                        <span class="rent">₹ 3,000.00</span>
+                        <button class="bookbtn">View Room</button>
+                    </div>
+                </div>
+
+                <div class="secondP" id="p3" onclick="window.location.href=`./roomDetails.html`">
+                    <img src="../accets/p8.png" alt="img" />
+                    <h2>Single Room</h2>
+                    <span><img src="../accets/icons/location.png"
+                            alt />Nanded</span>
+                    <span><img src="../accets/icons/icons8-person-24.png"
+                            alt />2 x
+                        Guests</span>
+                    <span><img src="../accets/icons/icons8-home-24.png"
+                            alt />single
+                        Room</span>
+
+                    <div class="bookOption">
+                        <span class="rent">₹ 3,000.00</span>
+                        <button class="bookbtn">View Room</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- sec 4 -->
+        <div class="sec4">
+            <img
+                src="../accets/p9.jpg" alt="img" style="position: absolute;top: 0%;left: 0%;width: 99vw;height: 30vh;margin: 0%;padding: 0%;" />
+            <div></div>
+            <span class="text">subscribe to our <br /><span
+                    style="font-size: 24px">NewHome</span></span>
+            <input type="text" placeholder="Your Email" />
+            <button>Send</button>
+        </div>
+        
+        <!-- sec About -->
+        <div class="aboutSec">
+            <div class="col1">
+
+                <div class="c1_r1">
+                    <div class="c1_1">
+                        <p>Room</p>
+                        <p style="color: #0A223D;">Matey</p>
+                    </div>
+                    <div class="c1_2">
+                        <p>ALL CATEGORIES</p>
+                        <ul>
+                            <li>All Deals</li>
+                            <li>Rooms</li>
+                            <li>Homes</li>
+                            <li>Rent Rooms</li>
+                            <li>1BHK</li>
+                            <li>Apartments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="c1_r2">
+                    <p class="p1">Contact details</p>
+                    <p class="p2">Feel free to contact us by phone, email or by our contact form</p>
+                    <p class="p3"><img src="../accets/icons/icons8-location-24.png" alt="">Nanded..</p>
+                    <div class="p4">
+                            <img src="../accets/icons/icons8-call-50.png" alt="tel">
+                            <p>
+                                Tel (business hours) : 269 1500 <br>
+                                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
+                                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                            </p>
+                    </div>
+                    <p class="p5"><img src="../accets/icons/icons8-email-50.png" alt="">RoomMatey@gmail.com</p>
+                </div>
+                
+            </div>
+
+            <div class="col2">
+                <div class="c2_r1">
+                    <div class="c2_1">
+                        <p>ADDITIONAL INFORMATION</p>
+                        <ul>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>How does it work?</li>
+                            <li>Asked Questions</li>
+                            <li>Deals</li>
+                        </ul>
+                    </div>
+                    <div class="c2_2">
+                        <p>LEAGAL INFORMATION</p>
+                        <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Disclaimer</li>
+                            <li>Cancellation policy</li>
+                            <li>Asked Questions</li>
+                        </ul>
+                    </div>
+                    <div class="c2_3">
+                        <p>SOCIAL NETWORK</p>
+                        <img src="../accets/icons/icons8-facebook-50.png" alt="">
+                        <img src="../accets/icons/icons8-instagram-50.png" alt="">
+                        <img src="../accets/icons/icons8-linkedin-50.png" alt="">
+                    </div>
+                </div>
+
+                <div class="c2_r2">
+                    <p class="p1">SEND US A MESSAGE</p>
+                    <input type="text" class="inp1" placeholder="Your Full Name">
+                    <input type="text" class="inp2" placeholder="Phone NO.">
+                    <input type="text" class="inp3" placeholder="Message">
+                    <button>Send</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./script/home.js" type="module"></script>
+        <script src="./script/LoginBTN.js" type="module"></script>
+        <script src="./script/navigation.js" type="module"></script>
+
+    </body>
+</html>

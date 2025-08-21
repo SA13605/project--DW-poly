@@ -1,0 +1,691 @@
+body {
+    margin: 0px;
+    padding: 0%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* search bar */
+.searchBar {
+    width: 100vw;
+    height: 7.5vh;  /* 7.5 vh done*/
+    background-color: #3b3a3a;
+    display: flex;
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+
+.searchBar>p {
+    font-size: 300%;
+    font-weight: bolder;
+    color: white;
+    margin-left: 2.5vw;
+}
+
+.searchBar>input {
+    width: 32.5vw;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius: 12px;
+    margin-left: 12.5vw;
+    margin-top: 1vh;
+    padding-left: 2.5vw;
+}
+
+.searchBar>input::placeholder {
+    text-align: justify;
+    left: 20%;
+}
+
+
+.searchBar>button{
+    margin-left: 30vw;
+    background-color: transparent;
+    border: none;
+}
+
+
+/* hero sec */
+#hero {
+    width: 100vw;
+    height: 20vh;  /* 55 vh done*/
+    position: relative;
+}
+
+#hero>img {
+    width: 100%;
+    height: 100%;
+}
+
+.heroP {
+    width: 7.5vw;
+    height: 15vh;
+    position: absolute;
+    top: 0.5vh;
+    left: 45vw;
+    border-radius: 50%;
+    outline: 5px solid black;
+    overflow: hidden;
+}
+
+.heroP>img {
+    width: 7.5vw;
+}
+
+.chengeBtns {
+    position: absolute;
+    bottom: 3vh;
+    left: 4vw;
+    width: 15vw;
+    height: 2vh;
+}
+
+.chengeBtns>.btn1 {
+    width: 7.5vw;
+    height: 4vh;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 16px;
+    font-size: 2vh;
+    background-color: #ffffff4e;
+}
+
+.chengeBtns>.btn2 {
+    width: 5.5vw;
+    height: 4vh;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 16px;
+    font-size: 2vh;
+    background-color: #ffffff4e;
+}
+
+.chengeBtns>button>img {
+    width: 1vw;
+}
+
+/* profile */
+.showProfile{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 23vw;
+    height: 67.5vh;
+    margin-top:0px;
+    padding: 2.5vh 1vw;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    caret-color: transparent;
+}
+
+.profileImgSec{
+    position: relative;
+    display: block;
+    width: 90%;
+    height: 25vh;
+    margin: 2.5vh 1vw;
+    border-radius: 16px;
+    background-color: #d4e2e5;
+}
+
+.profilePic{
+    margin-top: 15%;
+    margin-left: 40%;
+    width: 20%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.profileName{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.profileEmail{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.profileInfo > h5{
+    margin-left: 10px;
+}
+
+.profileInfo >p{
+    margin-left: 25px;
+}
+
+.mangeRoomBtn{
+    width: 60%;
+    margin: 10px 10% 10px 18%;
+    color: rgb(255, 255, 255);
+    background-color:  #172549;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+}
+
+.addRoomBtn{
+    width: 60%;
+    margin: 10px 10% 50px 18%;
+    color: rgb(255, 255, 255);
+    background-color:  #172549;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+}
+
+
+/* mainSec */
+
+#loginRec{
+    width: 80vw;
+    height: 70vh;
+    padding: 10vh 10vw;
+    margin-top: 0vh;
+    background-color: #e2cdcd;
+}
+
+#loginRec > .recBox{
+    width: 50vw;
+    height: 50vh;
+    background: white;
+    border-radius: 16px;
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
+
+.recBox > p{
+    font-size: 350%;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.recBox > button{
+    padding: 2.5vh 4.5vw;
+    border-radius: 15px;
+    background-color: #0A223D;
+    color: white;
+    margin-left: 20vw;
+    margin-top: 10vh;
+}
+
+.sec1{
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 25vw;
+    width: 70vw;
+    height: 67.5vh;
+    padding: 2.5vh 2.5vw;
+    /* background-color: #ff0000; */
+}
+
+/* sec menu */
+.option{
+    width: 70vw;
+    height: 5vh;
+    padding: .5vh 0vw;
+    margin-top: -1.5vh;
+    caret-color: transparent;
+    cursor: pointer;
+}
+
+.option>ul{
+    display: flex;
+    list-style: none;
+    gap: 5vw;
+    font-size: 200%;
+    font-weight: bold;
+    margin-left: 15vw;
+}
+
+/* add room */
+.addNew{
+    display: block;
+
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 16px;
+    border: 2px solid #172549;
+    background-color: #fff;
+}
+
+.addNew>button{
+    border: none;
+    margin-top: 7.5vh;
+    margin-left: 11vw;
+    color: transparent;
+}
+
+.addNew>p{
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 2vh;
+}
+
+
+/* added rooms */
+.added{
+    display: none; /* grid */
+    grid-template-columns: repeat(auto-fill, minmax(16vw,1vw));
+    overflow-y: scroll;
+    justify-content: center;
+    gap: 1vw;
+
+    position: absolute;
+    top: 7.5vh;
+    left: 1vw;
+    width: 67.5vw;
+    height: 52.5vh;
+    padding: 5vh 2.5vw;
+    border-radius: 16px;
+    border: 2px solid #172549;
+    background-color: #fff;
+}
+
+.added::-webkit-scrollbar{
+    display: none;
+}
+
+.addedRoomCard{
+    position: relative;
+    width: 16vw;
+    height: 55vh;
+    border-radius: 16px;
+    background-color: #e2e2e2;
+    overflow: hidden;
+    border: 2px solid black;
+    box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.55);
+}
+
+.updateCover{
+    width: 100%;
+    height: 100%;
+    background-color: #dc27276d;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: initial;
+}
+
+.addedRoomCardImg{
+    width: 16vw;
+    height: 25vh;
+}
+
+.Roomlocation{
+    margin-top: 2vh;
+    margin-left: 1vw;
+    font-size: 2.5vh;
+}
+
+.RoomCardRoomType{
+    margin-top: 2vh;
+    margin-left: 1vw;
+    font-size: 2.5vh;
+}
+
+.roomCardRoomRent{
+    margin-top: 2vh;
+    margin-left: 1vw;
+    font-size: 2.5vh;
+}
+
+.roomCardMoreBtn,
+.roomCardUpdateBtn,
+.roomCardDeleteBtn{
+    position: absolute;
+    top: 45vh;
+    left: 4vw;
+    z-index: 10;
+    padding:1.5vh 1.5vw;
+    border-radius: 16px;
+    background-color: #172549;
+    color: white;
+}
+
+
+/* update rooms */
+.update{
+    display: none; /* grid */
+    grid-template-columns: repeat(auto-fill, minmax(16vw,1vw));
+    overflow-y: scroll;
+    justify-content: center;
+    gap: 1vw;
+
+    position: absolute;
+    top: 7.5vh;
+    left: 1vw;
+    width: 67.5vw;
+    height: 52.5vh;
+    padding: 5vh 2.5vw;
+    border-radius: 16px;
+    border: 2px solid #172549;
+    background-color: #fff;
+}
+
+.update::-webkit-scrollbar{
+    display: none;
+}
+
+.roomCardUpdateBtn{
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+/* delete rooms */
+.delete{
+    display: none; /* grid */
+    grid-template-columns: repeat(auto-fill, minmax(16vw,1vw));
+    overflow-y: scroll;
+    justify-content: center;
+    gap: 1vw;
+
+    position: absolute;
+    top: 7.5vh;
+    left: 1vw;
+    width: 67.5vw;
+    height: 52.5vh;
+    padding: 5vh 2.5vw;
+    border-radius: 16px;
+    border: 2px solid #172549;
+    background-color: #fff;
+}
+
+.delete::-webkit-scrollbar{
+    display: none;
+}
+
+.roomCardDeleteBtn{
+    background-color: rgb(255, 96, 96);
+    color: black;
+}
+
+
+/* con box delete,update*/
+        /* confirm logout */
+        #logoutConfirm,
+        #updateBox
+        {
+            position: absolute;
+        }
+
+        .confirm-box,
+        .Uconfirm-box
+        {
+            z-index: 20;
+            display: none;
+            position: absolute;
+            top: 20vh;
+            left: 20vw;
+            background: white;
+            padding: 5vh 5vw;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .confirm-box h3,
+        .Uconfirm-box h3
+        {
+            margin-bottom: 5vh;
+        }
+
+        #btn-yes,
+        #btn-no,
+        #Ubtn-yes,
+        #Ubtn-no
+        {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn-yes,
+        #Ubtn-yes
+        {
+            background: #e74c3c;
+            color: white;
+        }
+
+        #btn-no,
+        #Ubtn-no {
+            background: #2ecc71;
+            color: white;
+        } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* about */
+.aboutSec{
+    width: 99vw;
+    height: 100vh;
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.col1{
+    width: 40vw;
+    height: 90vh;
+    margin: 2.5vh 0vw 2.5vh 5vw;
+    padding: 2.5vh 1.5vw;
+    /* background-color: #fff; */
+}
+
+.col2{
+    width: 40vw;
+    height: 90vh;
+    margin: 2.5vh 2.5vw 2.5vh 0vw;
+    padding: 2.5vh 1.5vw;
+    /* background-color: #fff; */
+}
+.c1_r1{
+    position: relative;
+    display: flex;
+    width: 35vw;
+    height: 35vh;
+    padding: 2.5vh 2.5vw;
+    border: 2px solid #000;
+}
+
+
+.c1_1{
+    position: absolute;
+    width: 20vw;
+    height: 30vh;
+    padding-top: 5vh;
+    border-right: 1px solid #000;
+}
+
+.c1_1>p{
+    font-size: 500%;
+    text-align: center;
+}
+
+.c1_2{
+    position: absolute;
+    right: 0%;
+    width: 20vw;
+    height: 40vh;
+}
+
+.c1_2>p{
+    font-size: 24px;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    margin-left: 5vw;
+    color: #0A223D;
+
+}
+
+.c1_2>ul>li{
+    font-size: 20px;
+    list-style: none;
+    font-style: 20px;
+    margin-bottom: 1vh;
+    margin-left: 5vw;
+}
+
+.c1_r2{
+    /* margin-top: 4vh;
+    width: 40vw;
+    height: 40vh;
+    text-align: left;
+    border: 2px solid black; */
+    margin-top: 5vh;
+    width: 35vw;
+    height: 35vh;
+    border: 2px solid black;
+    padding: 2.5vh 2.5vw;
+}
+
+.c1_r2>p{
+    margin-left: 5vw;
+    margin-top: 2vh;
+    font-size: 20px;
+}
+
+.c1_r2>.p3>img,
+.c1_r2>.p4>img,
+.c1_r2>.p5>img{
+    width: 2vw;
+    height: 2vh;
+    margin-right: 2vh;
+}
+
+.c1_r2>.p4{
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+
+.c1_r2>.p1{
+    font-size: 24px;
+    color: #0A223D;
+}
+
+.c2_r1{
+    display: flex;
+    width: 35vw;
+    height: 35vh;
+    padding: 2.5vh 2.5vw;
+    border: 2px solid #000;
+    /* background-color: #ed8433; */
+}
+
+.c2_1>p{
+    text-align: left;
+    font-size: 16px;
+    color: #0A223D;
+}
+
+.c2_1>ul>li{
+    list-style: none;
+    margin: 1vh;
+}
+
+
+.c2_2{
+    padding-left: 5vw;
+    border-left: 1px solid #000;
+}
+
+.c2_2>p{
+    color: #0A223D;
+    font-size: 16px;
+}
+
+.c2_2>ul>li{
+    list-style: none;
+    margin: 1vh;
+}
+
+.c2_3{
+    margin-left: 2.5vw;
+    width: 10vw;
+    border-left: 1px solid #0A223D;
+    padding-left: 1vw;
+    /* background-color: #fff; */
+}
+
+.c2_3>p{
+    color: #0A223D;
+}
+
+.c2_3>img{
+    margin-top: 2.5vh;
+    width: 2.5vw;
+    height: 2.5vh;
+}
+.c2_r2{
+    margin-top: 5vh;
+    width: 35vw;
+    height: 35vh;
+    border: 2px solid black;
+    padding: 2.5vh 2.5vw;
+}
+
+.c2_r2>.p1{
+    font-size: 24px;
+    margin-top: 10px;
+    color: #0A223D;
+}
+
+.c2_r2>.inp1{
+    margin-top: 2.5vw;
+    margin-right:2vw;
+    width: 15vw;
+    height: 5vh;
+}
+
+.c2_r2>.inp2{
+    width: 15vw;
+    height: 5vh;
+}
+
+.c2_r2>.inp3{
+    margin-top: 2.5vh;
+    width: 32.5vw;
+    height: 5vh;
+}
+
+.c2_r2>button{
+    display: block;
+    margin-top: 2.5vh;
+    padding: 10px 20px;
+    background-color: #0A223D;
+    color: #fff;
+}

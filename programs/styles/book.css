@@ -1,0 +1,266 @@
+.main{
+    width: 98vw;
+    height: 96vh;
+    display: flex;
+    overflow-y: scroll;
+}
+
+.c1{
+    width: 48vw;
+    height: 94vh;
+    padding: 0px;
+    margin: 1vh 1vw;
+    overflow-y: scroll;
+}
+
+.c2{
+    width: 49vw;
+    height: 96vh;
+    overflow-y: scroll;
+    caret-color: transparent;
+}
+
+.c1::-webkit-scrollbar,
+.c2::-webkit-scrollbar{
+    display: none;
+}
+
+.c1>.imgs{
+    width:40vw;
+    height: 90vh;
+    margin-left: 3vw;
+}
+
+.imgRow{
+    width: 40vw;
+    height:20vh;
+}
+
+.imgRow>img{
+    height: 90%;
+    width: 18%;
+    border-radius: 16px;
+    margin-left: 0.5vw;
+}
+
+.details{
+    position: sticky;
+    bottom: 0%;
+}
+
+.imgs{
+    width: 40vw;
+    height: 96vh;
+    margin: 2vh 5vw;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.imgs>img{
+    width: 100%;
+    height: 80%;
+    border-radius: 16px;
+}
+
+.name{
+    font-size: 500%;
+    margin: 0%;
+}
+
+.location{
+    font-size: 150%;
+}
+
+.rating{
+    font-size: 150%;
+}
+
+.amenitiesText{
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.amenities{
+    font-size: 150%;
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 5%;
+}
+
+.amenities>li{
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.amenities>li>img{
+    margin-right: 1vw;
+    width: 2vw;
+}
+.price{
+    border: 2px solid black;
+    font-size: 150%;
+    padding: 2%;    
+}
+
+.policeText{
+    font-weight: bold;
+    font-size: 150%;
+    margin-top: 10%;
+}
+
+.police{
+    font-size: 200%;
+    margin-left: 5%;
+}
+
+.police>img{
+    width: 1.5vw;
+    margin-right: 0.5vw;
+}
+
+.bookBTN{
+    padding: 1.5vh 18vw;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    border-radius: 16px;
+}
+
+/* .imgRow>img{
+    width: 1vw;
+    height: 2vh;
+} */
+
+/* smiler product */
+.productCollection{
+    width: 90vw;
+    height: 140vh;
+    margin-top: 20vh;
+    margin-left:5vw;
+    margin-bottom: 50vh;
+    position: relative;
+}
+
+.row1{
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+}
+
+.firstP{
+    width: 52.5vw;
+    height: 80vh;
+    margin-left: 5vw;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: gray;
+}
+
+.imgsec>img{
+    width: 25vw;
+    height: 80vh;
+}
+
+.firstP-info{
+    color: white;
+    display: block;
+}
+
+.discription{
+    text-align: left;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.firstP-info>div{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 25px;
+}
+
+.firstP-info>div>div{
+    margin-left: 20px;
+}
+
+.firstP-info img{
+    width: 30px;
+    height: 30px;
+}
+
+#hed{
+    color: #F2994A;
+}
+
+.title{
+    font-size: 32px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.bookOption{
+    position: relative;
+    /* background-color: gray; */
+}
+
+.bookOption>span{
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.bookOption>button{
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: #0A223D;
+    color: white;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+.secondP{
+    width: 25vw;
+    height: 80vh;
+    background-color: gray;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-left: 2.5vw;
+}
+
+.secondP>img{
+    width: 100%;
+    height: 50%;
+}
+
+.secondP>h2{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.secondP>span{
+    margin-top: 20px;
+    margin-left: 50px;
+    display: block;
+    font-size: 20px;
+}
+
+.secondP>span>img{
+    margin-right: 10px;
+}
+
+
+.row2{
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 2.5vw;
+}

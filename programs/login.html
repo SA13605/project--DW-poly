@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./styles/login.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="account">
+            <div class="acc-info">
+                <h1>Hello, Welcome!</h1>
+                <p>"Welcome back! Your next Stay is just a click away."</p>
+                <button class="create-account-btn">Login Your Account</button>
+            </div>
+        </div>
+
+        <div class="google">
+            <h2>Login</h2>
+            <p class="subtitle">Hey enter your to sign into your account</p>
+
+            <button class="google-btn">
+                <img src="https://www.google.com/favicon.ico" alt="Google Icon">
+                <span>Sign in with Google</span>
+            </button>
+
+            <div class="new">or sign in with Email</div>
+
+            <form id="login-form">
+                <div class="input">
+                    <input type="text" id="usernameL" placeholder="Enter your username">
+                </div>
+                <div class="input">
+                    <input type="password" id="passwordL" placeholder="Enter your password">
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+
+                <button type="button" class="loginbtn">Login</button>
+            </form>
+            
+            <p class="register-text">Not registered yet? <a href="./createA.html">Create an account</a></p>
+        </div>
+    </div>
+
+    <script src="./script/createA.js" type="module"></script>
+</body>
+</html>
