@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Bar</title>
+    <link rel="stylesheet" href="./styles/nf.css">
+    <link rel="stylesheet" href="./styles/favorite.css">
+    <link rel="stylesheet" href="./styles/help.css">
+    <link rel="stylesheet" href="./styles/roomMetey.css">
+    <link rel="stylesheet" href="./styles/Privacy.css">
     <style>
         body {
             background-color: #f7f7f7;
@@ -64,11 +69,11 @@
         .show {
             width: 55vw;
             height: 85vh;
-            background-color: blueviolet;
             padding: 5vh 5vw;
             position: relative;
             left: 33vw;
             top: auto;
+            overflow-y: scroll;
         }
 
 
@@ -91,7 +96,7 @@
         }
 
         #btn-yes,
-        #btn-no{
+        #btn-no {
             padding: 10px 20px;
             margin: 5px;
             border: none;
@@ -119,70 +124,426 @@
     </div>
 
     <div class="menu">
-        <div class="option"> <img src="../accets/icons/icons8-bell-50.png" alt=""> Notifications</div>
-        <div class="option"> <img src="../accets/icons/icons8-heart-50.png" alt=""> Favourite</div>
-        <div class="option"> <img src="../accets/icons/icons8-open-door-50.png" alt=""> Rooms</div>
-        <div class="option"> <img src="../accets/icons/icons8-gear-50.png" alt=""> Settings</div>
+        <div class="option" id="optn"> <img src="../accets/icons/icons8-bell-50.png" alt=""> Notifications</div>
+        <div class="option" id="optF"> <img src="../accets/icons/icons8-heart-50.png" alt=""> Favourite</div>
+        <div class="option" id="optR"> <img src="../accets/icons/icons8-open-door-50.png" alt=""> Rooms</div>
+        <div class="option" id="optS"> <img src="../accets/icons/icons8-gear-50.png" alt=""> Settings</div>
         <br><br>
-        <div class="option"> <img src="../accets/icons/icons8-headset-50.png" alt=""> Help Center</div>
-        <div class="option"> <img src="../accets/icons/icons8-typing-50.png" alt=""> RoomMatey</div>
-        <div class="option"> <img src="../accets/icons/icons8-privacy-policy-50.png" alt=""> Privacy Policy</div>
+        <div class="option" id="optH"> <img src="../accets/icons/icons8-headset-50.png" alt=""> Help Center</div>
+        <div class="option" id="optRM"> <img src="../accets/icons/icons8-typing-50.png" alt=""> RoomMatey</div>
+        <div class="option" id="optP"> <img src="../accets/icons/icons8-privacy-policy-50.png" alt=""> Privacy Policy</div>
         <br><br>
-        <div id="logoutBtn"> <img src="../accets/icons/icons8-unavailable-50.png" alt="" > Log Out</div>
+        <div id="logoutBtn"> <img src="../accets/icons/icons8-unavailable-50.png" alt=""> Log Out</div>
     </div>
 
     <div class="show">
-        
+        <!-- notification -->
+        <div class="containernf">
+            <header class="header">
+                <svg class="header-icon" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <h1 class="header-title">Notifications</h1>
+            </header>
+            <p class="header-subtitle" aria-live="polite">
+                Stay updated with your room search
+            </p>
+
+            <form class="search-container" role="search" aria-label="Search notifications">
+                <input type="search" placeholder="Search notifications........" aria-label="Search notifications" />
+            </form>
+
+            <div class="filter-row" role="region" aria-label="Filter notifications">
+                <div class="filter-tabs" role="tablist" aria-label="Notification filters">
+                    <button type="button" aria-selected="true" tabindex="0" class="filter-tab active" role="tab"
+                        id="filter-all" aria-controls="notifications-list">
+                        All
+                    </button>
+                    <button type="button" aria-selected="false" tabindex="-1" class="filter-tab" role="tab"
+                        id="filter-unread" aria-controls="notifications-list">
+                        Unread <span class="badge" aria-label="3 unread notifications">3</span>
+                    </button>
+                </div>
+                <button type="button" class="mark-read-button" aria-label="Mark all notifications as read">
+                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Mark all as Read
+                </button>
+            </div>
+
+            <section class="notifications-list" id="notifications-list" aria-live="polite" aria-relevant="additions">
+                <article class="notification" tabindex="0" role="article"
+                    aria-label="New Room Match Found, A perfect apartment in Downtown matches your criteria. Monthly rent 9,000. Posted 30 minutes ago, Category Room Match. Unread">
+                    <div class="notification-header">
+                        <span class="notification-icon icon-home" aria-hidden="true" title="New Room Match Found">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M10 2L1 9V16C1 16.5304 1.21071 17.0391 1.58579 17.4142C1.96086 17.7893 2.46957 18 3 18H17C17.5304 18 18.0391 17.7893 18.4142 17.4142C18.7893 17.0391 19 16.5304 19 16V9L10 2Z"
+                                    stroke="#D27031" stroke-width="1.5" fill="#FFD9B6" />
+                                <path d="M6 18V9H14V18" stroke="#D27031" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                        New Room Match Found
+                        <span class="blue-dot" aria-label="Unread notification indicator" role="presentation"></span>
+                    </div>
+                    <p class="notification-content">
+                        A perfect apartment in Downtown matches your criteria. Monthly rent: 9,000
+                    </p>
+                    <footer class="notification-footer">
+                        <span>
+                            <svg class="footer-clock-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                                <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            30m ago
+                        </span>
+                        <span class="footer-category">Room Match</span>
+                    </footer>
+                </article>
+
+                <article class="notification" tabindex="0" role="article"
+                    aria-label="Viewing Confirmed, Your viewing for 1 BHK apartment is confirmed for tomorrow at 3 PM. Posted 2 hours ago, Category Room Match. Read">
+                    <div class="notification-header">
+                        <span class="notification-icon icon-calendar" aria-hidden="true" title="Viewing Confirmed">
+                            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <rect x="3" y="4" width="12" height="11" rx="2" stroke="#30964B" fill="#C1E1B9"
+                                    stroke-width="1.5" />
+                                <path d="M7 1v3M11 1v3" stroke="#30964B" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M6 9h6" stroke="#30964B" stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                        Viewing Confirmed
+                    </div>
+                    <p class="notification-content">
+                        Your viewing for 1 BHK apartment is confirmed for tomorrow at 3:00 PM
+                    </p>
+                    <footer class="notification-footer">
+                        <span>
+                            <svg class="footer-clock-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                                <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            2h ago
+                        </span>
+                        <span class="footer-category">Room Match</span>
+                    </footer>
+                </article>
+
+                <article class="notification" tabindex="0" role="article"
+                    aria-label="Message from Roommate, Hi! I saw interest in the apartment. Posted 7 hours ago, Category Message. Read">
+                    <div class="notification-header">
+                        <span class="notification-icon icon-mail" aria-hidden="true" title="Message from Roommate">
+                            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <rect width="18" height="14" y="2" rx="3" stroke="#6D4DB7" fill="#D8D3F4"
+                                    stroke-width="1.5" />
+                                <path d="M1 2L9 9L17 2" stroke="#6D4DB7" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                        Message from Roommate
+                        <span class="blue-dot" aria-label="Unread notification indicator" role="presentation"></span>
+                    </div>
+                    <p class="notification-content">
+                        Hi! I saw interest in the apartment.
+                    </p>
+                    <footer class="notification-footer">
+                        <span>
+                            <svg class="footer-clock-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                                <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            7h ago
+                        </span>
+                        <span class="footer-category">Message</span>
+                    </footer>
+                </article>
+
+                <article class="notification" tabindex="0" role="article"
+                    aria-label="New Room Match Found, A perfect apartment in Downtown matches your criteria. Monthly rent 10,000. Posted 2 days ago, Category Room Match. Read">
+                    <div class="notification-header">
+                        <span class="notification-icon icon-home" aria-hidden="true" title="New Room Match Found">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M10 2L1 9V16C1 16.5304 1.21071 17.0391 1.58579 17.4142C1.96086 17.7893 2.46957 18 3 18H17C17.5304 18 18.0391 17.7893 18.4142 17.4142C18.7893 17.0391 19 16.5304 19 16V9L10 2Z"
+                                    stroke="#D27031" stroke-width="1.5" fill="#FFD9B6" />
+                                <path d="M6 18V9H14V18" stroke="#D27031" stroke-width="1.5" />
+                            </svg>
+                        </span>
+                        New Room Match Found
+                        <span class="blue-dot" aria-label="Unread notification indicator" role="presentation"></span>
+                    </div>
+                    <p class="notification-content">
+                        A perfect apartment in Downtown matches your criteria. Monthly rent: 10,000
+                    </p>
+                    <footer class="notification-footer">
+                        <span>
+                            <svg class="footer-clock-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" />
+                                <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            2d ago
+                        </span>
+                        <span class="footer-category">Room Match</span>
+                    </footer>
+                </article>
+            </section>
+        </div>
 
 
+        <!--favorite  -->
+        <div class="favorite" style="display: grid;grid-template-columns: 45% 45%;gap: 5%;margin-bottom: 5vh;">
+
+            <div class="card" onclick="window.location.href='p4.html'">
+                <div class="card-img-wrapper">
+                    <img src="../accets/rooms/room4.jpg" alt="Room Image">
+                    <div class="heart">♡</div>
+                </div>
+                <div class="card-content">
+                    <div class="title">Krushna NIVAS</div>
+                    <div class="rating">★★</div>
+                    <div class="desc">1 bedroom House for rent</div>
+                    <div class="location"><img src="../accets/icons/location.png" alt=""
+                            style="width: 2vw;height: 4vh;"> <span>PushpNager, Nanded</span></div>
+                </div>
+                <div class="footer">
+                    <p>see more Details</p>
+                    <a href="#" class="btn">See Details</a>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='p5.html'">
+                <div class="card-img-wrapper">
+                    <img src="../accets/rooms/room5.jpg" alt="Room Image">
+                    <div class="heart">♡</div>
+                </div>
+                <div class="card-content">
+                    <div class="title">SHAM NIVAS</div>
+                    <div class="rating">★★</div>
+                    <div class="desc">1 bedroom 2 Hall House for rent</div>
+                    <div class="location"><img src="../accets/icons/location.png" alt=""
+                            style="width: 2vw;height: 4vh;"> <span>vishnupuri, Nanded</span></div>
+                </div>
+                <div class="footer">
+                    <p>see more Details</p>
+                    <a href="#" class="btn">See Details</a>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='p6.html'">
+                <div class="card-img-wrapper">
+                    <img src="../accets/rooms/room6.jpg" alt="Room Image">
+                    <div class="heart">♡</div>
+                </div>
+                <div class="card-content">
+                    <div class="title">INDEPENDENT HOUSE</div>
+                    <div class="rating">★★</div>
+                    <div class="desc">2 bedroom House for rent</div>
+                    <div class="location"><img src="../accets/icons/location.png" alt=""
+                            style="width: 2vw;height: 4vh;"> <span>kabra nagar, Nanded</span></div>
+                </div>
+                <div class="footer">
+                    <p>see more Details</p>
+                    <a href="#" class="btn">See Details</a>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='p7.html'">
+                <div class="card-img-wrapper">
+                    <img src="../accets/rooms/room7.jpg" alt="Room Image">
+                    <div class="heart">♡</div>
+                </div>
+                <div class="card-content">
+                    <div class="title">VISAWA PALACE</div>
+                    <div class="rating">★★★★</div>
+                    <div class="desc">Independent palace</div>
+                    <div class="location"><img src="../accets/icons/location.png" alt=""
+                            style="width: 2vw;height: 4vh;"> <span>PushpNager, Nanded</span></div>
+                </div>
+                <div class="footer">
+                    <p>see more Details</p>
+                    <a href="#" class="btn">See Details</a>
+                </div>
+            </div>
+        </div>
 
 
+        <div class="help" >
+            <h1>🆘 Help Center – RoomMatey</h1>
+            <p>Welcome to the RoomMatey Help Center! Here you will find answers to common questions, guides, and support
+                information to make your room finding journey easier.</p>
+
+            <h2>Getting Started</h2>
+            <h3>How do I create an account?</h3>
+            <ul>
+                <li>— Click on Sign Up, enter your details, and verify your email.</li>
+            </ul>
+
+            <h3>How do I search for rooms?</h3>
+            <ul>
+                <li>— Use the search bar and apply filters like location.</li>
+            </ul>
+
+            <h3>How do I contact a room owner?</h3>
+            <ul>
+                <li>— Open the room listing and click on the Contact Owner button.</li>
+            </ul>
+
+            <h2>Account & Profile</h2>
+            <p>Update your profile details anytime from My Account.</p>
+            <ul>
+                <li>Reset your password using the Forgot Password option.</li>
+                <li>Manage notifications and privacy settings under Account Settings.</li>
+            </ul>
+
+            <h2>Safety & Security</h2>
+            <ul>
+                <li>Always communicate via the RoomMatey platform.</li>
+                <li>Do not share sensitive personal details outside the app.</li>
+                <li>Report any suspicious activity using the Report option.</li>
+            </ul>
+
+            <h2>FAQs</h2>
+            <h3>Can I list my own room?</h3>
+            <p>— Yes, go to Post a Room and follow the steps.</p>
+
+            <h3>Is my data safe?</h3>
+            <p>— Yes, we use SSL encryption and strict privacy measures.</p>
+
+            <h2>Contact Support</h2>
+            <div class="contact">
+                <p>🖥️ Email: support@roommatey.com</p>
+                <p>📞 Phone: +91-XXXXXXXXXXX (Mon–Fri, 10AM–6PM)</p>
+            </div>
+        </div>
+
+        <div class="roomMetey">
+            <div class="container">
+                <header>
+                    <h1>About RoomMatey – Elevating Room Discovery</h1>
+                    <h2>Welcome to RoomMatey</h2>
+                    <p>your reliable companion in finding the perfect rooms preferences.</p>
+                </header>
+
+                <section class="who-we-are">
+                    <h3>Who We Are</h3>
+                    <p>RoomMatey is a user-focused platform dedicated to connecting room seekers with trusted roommates
+                        and roommates. Whether you’re new in town, looking to rent out space, or seeking a roommate,
+                        RoomMatey makes every search easier and more secure.</p>
+                </section>
+
+                <section class="mission">
+                    <h3>Our Mission</h3>
+                    <ul>
+                        <li>Simplify room hunting with smart filters and local recommendations</li>
+                        <li>Build safe experiences with secure communication & privacy controls</li>
+                        <li>Empower users through clear information and support</li>
+                    </ul>
+                </section>
+
+                <section class="offer">
+                    <h3>What We Offer</h3>
+                    <ul>
+                        <li><strong>Search & Connect:</strong> Browse featured listings by city, price, location, or
+                            amenities</li>
+                        <li><strong>Verified Listings:</strong> All hosted rooms undergo quality checks to ensure trust
+                        </li>
+                        <li><strong>Smart Filters:</strong> Find the ideal match using price, space type, furnished
+                            options, proximity, and more</li>
+                        <li><strong>In-App Messaging:</strong> Communicate securely with room owners—no need to share
+                            personal details</li>
+                        <li><strong>Help Center & Support:</strong> Easy access to guides, assistance, and quick
+                            resolutions</li>
+                    </ul>
+                </section>
+
+                <section class="benefits">
+                    <h3>Why Choose RoomMatey?</h3>
+                    <h4>Feature Benefits</h4>
+                    <ul>
+                        <li>Verified Profiles Trustworthy people and listings.</li>
+                        <li>Privacy-Focused Your data is protected, and users control what information they share.</li>
+                        <li>Local Expertise We tailor suggestions using your preferred city or locality.</li>
+                        <li>Modern, Clean Design Our platform is fast, intuitive, and mobile-ready.</li>
+                        <li>Dedicated Support Email or call us—our team is here to help.</li>
+                    </ul>
+                </section>
+
+                <section class="story">
+                    <h3>Our Story</h3>
+                    <p>Started in 2025 by a team passionate about enhancing rental experiences, RoomMatey began as a
+                        simple idea: to make room hunts less daunting and more human. We’ve grown into a trusted
+                        resource for students, young professionals, and anyone looking for flexible housing.</p>
+                </section>
+
+                <footer>
+                    <h3>Get in Touch</h3>
+                    <p>If you have questions, feedback, or ideas for improving RoomMatey, we’d love to hear from you!
+                    </p>
+                </footer>
+            </div>
+        </div>
 
 
+        <div class="privacy">
+            <div class="container">
+                <h1>Privacy Policy – RoomMatey</h1>
+                <p class="date">Last Updated: [10-8-2025]</p>
 
+                <p>At RoomMatey, your privacy and personal data security are very important to us. This Privacy Policy
+                    explains how we collect, use, and safeguard your information when you use our website.</p>
 
+                <h2>When you use RoomMatey, we may collect:</h2>
+                <ul>
+                    <li><strong>Personal Information:</strong> Name, Email, Phone Number, Login details.</li>
+                    <li><strong>Usage Data:</strong> IP address, browser type, and pages you visit.</li>
+                    <li><strong>Location Data:</strong> If you allow, approximate location to recommend nearby rooms.
+                    </li>
+                </ul>
 
+                <h2>We use your information to:</h2>
+                <ul>
+                    <li>Connect room owners with tenants.</li>
+                    <li>Improve our website and services.</li>
+                    <li>Ensure safety and prevent fraud.</li>
+                    <li>Send you updates, notifications, or offers (only if you opt in).</li>
+                </ul>
 
+                <h2>Data Protection</h2>
+                <p>We use SSL encryption and secure servers.</p>
+                <p>Your data is never sold to third parties.</p>
+                <p>Access to your data is limited to authorized staff only.</p>
 
+                <p class="cookies">RoomMatey uses cookies to give you a better, personalized experience. You can disable
+                    cookies in your browser, but some features may not work properly.</p>
 
+                <h2>Policy Updates</h2>
+                <p>We may update this Privacy Policy from time to time. The latest version will always be available on
+                    our website with the updated date.</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <h2>Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p><a href="mailto:support@roommatey.com">support@roommatey.com</a></p>
+            </div>
+        </div>
 
         <div id="logoutConfirm">
             <div class="confirm-box">
                 <h3>Are you sure you want to log out?</h3>
-                <button id="btn-yes" >Yes</button>
-                <button id="btn-no" >No</button>
+                <button id="btn-yes">Yes</button>
+                <button id="btn-no">No</button>
             </div>
         </div>
     </div>

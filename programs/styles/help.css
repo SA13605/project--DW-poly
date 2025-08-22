@@ -1,0 +1,32 @@
+.help {
+    width: 80%;
+    margin: 5vh 2.5%;
+    padding: 2.5vh 7.5%;
+    background-color: #fff;
+    height: fit-content;
+}
+
+.help>h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.help>h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.help>p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.help>ul {
+    margin: 10px 0 20px 20px;
+}
+
+.help>.contact {
+    margin-top: 30px;
+    font-size: 16px;
+}

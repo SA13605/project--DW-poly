@@ -127,14 +127,11 @@ function addedRoom(i) {
 
 let morbtn = document.querySelectorAll(".roomCardMoreBtn");
 
-morbtn.forEach((btn, index) => {
-    btn?.addEventListener("click", () => {
-            // window.location.href = "./roomDetails.html";
+morbtn.forEach((btn,index)=>{
+    btn?.addEventListener("click",()=>{
+        window.location.href="./DynamicP.html";
     });
 });
-
-
-
 
 // section update cards
 function updateRoom(i) {
@@ -180,50 +177,18 @@ function updateRoom(i) {
 }
 
 let updateBtn = document.querySelectorAll(".roomCardUpdateBtn");
-let UconBox = document.querySelector(".Uconfirm-box");
-let Utext = document.getElementById("Utext");
-let Ubtny = document.getElementById("Ubtn-yes");
-let UbtnN = document.getElementById("Ubtn-no");
+let sendIndex;
 
 updateBtn.forEach((btn, index) => {
-    if(roomDataArray[index].avilable){
-        btn.innerText ="Avilable";
-        btn.style.background= "#2ecc71";
-    }
-    else{
-        btn.innerText ="Not Avilable";
-        btn.style.background= "#e74c3c";
-    }
     btn.addEventListener("click", () => {
-        if(roomDataArray[index].avilable){
-            Utext.innerText = "Are You Shure! Your Room is Currently Not Available?";
-            Ubtny.style.background = "#e74c3c";
-            UbtnN.style.background = "#2ecc71";
-        }else{
-            Utext.innerText = "Are You Shure! Your Room is Currently Available?";
-            Ubtny.style.background = "#2ecc71";
-            UbtnN.style.background = "#e74c3c";    
-        }
-
-        UconBox.style.display = "block";
-        let sendIndex = index;
-        Ubtny.addEventListener("click",()=>{
-            Ubtny.onclick(toggleAvailable(sendIndex));
-        })
+        sendIndex = index;
+        window.location.href='test.html';
     });
 });
 
-function toggleAvailable(index){
-    UconBox.style.display = "none";
-    roomDataArray[index].avilable= !roomDataArray[index].avilable;
-    setRoomData(roomDataArray);
-    window.location.href = "profile.html";
+export function sendUpdateIndex(sendIndex){
+    return sendIndex;
 }
-
-UbtnN.addEventListener("click",()=>{
-    UconBox.style.display = "none";
-})
-
 
 
 // delete sec room

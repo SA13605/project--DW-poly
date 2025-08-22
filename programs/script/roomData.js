@@ -74,7 +74,7 @@ btnOk?.addEventListener("click",(event)=>{
     console.log(property);
     location.reload();
 
-    window.location.href = 'home.html';
+    window.location.href = './profile.html';
 });
 
 // cancel Btn
