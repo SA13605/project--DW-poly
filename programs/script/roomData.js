@@ -1,4 +1,3 @@
-// show con
 let propertyData = JSON.parse(localStorage.getItem("storeRooms")) || [];
 let property = {};
 
