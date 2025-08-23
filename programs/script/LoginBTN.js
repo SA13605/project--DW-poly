@@ -7,7 +7,7 @@ console.log(getRoomData());
 
 let loginBtn = document.getElementById("loginBtn");
 
-if (getLogin){
+if (getLogin()){
     loginBtn.innerText = `LoggedIn`;
 } else{
     loginBtn.innerText = "Login";

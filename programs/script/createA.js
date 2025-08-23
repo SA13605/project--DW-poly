@@ -73,3 +73,4 @@ loginBtn?.addEventListener("click",(event)=>{
         window.location.href = "createA.html"; // send back to signup
     }
 });
+// localStorage.clear();
