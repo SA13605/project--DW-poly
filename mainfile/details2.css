@@ -609,6 +609,60 @@ body {
             color: #2c3e50;
             margin-bottom: 10px;
         }
+            .room-card {
+    width: 350px; /* Increase width */
+    height: auto; /* Adjust if needed */
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Increase size of the image container */
+.room-image {
+    width: 100%;
+    height: 250px; /* Increase height */
+    overflow: hidden; /* Ensures no overflow */
+    gap: 20px;
+}
+
+/* Increase size of the image */
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio and fills container */
+    gap: 20px;
+}
+.room-card {
+    width: 350px;          /* Wider cards */
+    height: auto;
+    margin: 20px;          /* Space between cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: adds a soft shadow */
+    border-radius: 8px;    /* Optional: rounded corners */
+    overflow: hidden;
+    background-color: #fff;
+}
+/* Grid spacing between room cards */
+.similar-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;             /* Space between cards in grid */
+    justify-content: center; /* Center the cards */
+}
+/* Room image container */
+.room-image {
+    width: 100%;
+    height: 250px;         /* Taller image */
+    overflow: hidden;
+}
+
+/* Image itself */
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}.room-content {
+    padding: 16px;         /* Space inside the content block */
+}
 
         .see-details-btn {
             display: block;
