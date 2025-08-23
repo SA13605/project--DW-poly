@@ -37,6 +37,11 @@ body {
             /* Tall column */
            
         }
+          .big img{
+            width: 100%;
+            height: 100px;
+            max-height: 500px;
+          }
 
         .images img {
             width: 100%;
@@ -52,6 +57,11 @@ body {
             grid-template-rows: 1fr 1fr;
             gap: 5px;
         }
+         .right-grid img{
+           width:100%;
+            height:247px ;
+        }
+
 
         /* Rent + Map Top Section */
         .top-section {
@@ -301,6 +311,12 @@ body {
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
         }
+        .facility-item img{
+        width: 30px;
+        height: 30px;
+      
+      
+    }
 
         .facility-icon {
             width: 60px;

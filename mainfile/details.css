@@ -37,6 +37,11 @@ body {
             /* Tall column */
            
         }
+        .big img{
+            width: 100%;
+            height: 100px;
+            max-height: 500px;
+        }
 
         .images img {
             width: 100%;
@@ -51,6 +56,10 @@ body {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: 5px;
+        }
+        .right-grid img{
+           width:100%;
+            height:247px ;
         }
 
         /* Rent + Map Top Section */
@@ -123,6 +132,7 @@ body {
             border: 0;
             border-radius: 8px;
         }
+        
 
         /* Info Section */
         .info {
@@ -247,10 +257,11 @@ body {
 
         .property-card {
             max-width: 400px;
-            background-color: whitesmoke;
+            background-color:white;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin: 3 auto;
+            border-radius: 4px;
             border: 1px solid;
         }
 
@@ -301,7 +312,12 @@ body {
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
         }
-
+    .facility-item img{
+        width: 30px;
+        height: 30px;
+      
+      
+    }
         .facility-icon {
             width: 60px;
             height: 60px;
@@ -354,6 +370,7 @@ body {
 
         .about-property {
             margin-bottom: 25px;
+            
         }
 
         .address {
@@ -440,6 +457,7 @@ body {
             padding: 10px 5px;
             scrollbar-width: thin;
             scrollbar-color: #888 #f1f1f1;
+           
         }
 
         .carousel::-webkit-scrollbar {
@@ -478,6 +496,8 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            
+            
         }
 
         .carousel-nav {
@@ -545,6 +565,8 @@ body {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             cursor: pointer;
+           
+           
         }
 
         .room-card:hover {
@@ -554,10 +576,12 @@ body {
         .room-image {
             height: 160px;
             overflow: hidden;
+            
         }
 
         .room-image img {
             width: 100%;
+            max-width: 500px;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
