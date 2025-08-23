@@ -101,6 +101,11 @@ body {
     caret-color: transparent;
 }
 
+iframe{
+    width: inherit;
+    height: inherit;
+}
+
 .details {
     position: absolute;
     width: 20vw;
@@ -246,7 +251,7 @@ body {
     margin-left: 5vw;
 }
 
-/* mode data */
+/* more data */
 .moreData {
     width: 25vw;
     height: 30vh;
@@ -372,15 +377,12 @@ body {
     margin-top: 2vh;
 }
 
-
-
-
 /* more imgs */
 .moreimgs {
     width: 90vw;
     height: 60vh;
     overflow-x: scroll;
-    margin-top: 2.5vh;
+    margin-top: 5vh;
     padding: 5vh 5vw;
     position: relative;
     display: flex;

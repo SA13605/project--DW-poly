@@ -45,7 +45,15 @@ let secAdded = document.querySelector(".added");
 let secUpdate = document.querySelector(".update");
 let secDelete = document.querySelector(".delete");
 
+
+btnAddNew.style.backgroundColor = "gray";
 btnAddNew?.addEventListener("click", () => {
+    btnAddNew.style.backgroundColor = "gray";
+    btnAdded.style.backgroundColor = "white";
+    btnUpdate.style.backgroundColor = "white";
+    btnDelete.style.backgroundColor = "white";
+
+
     secAddNew.style.display = "block";
     secAdded.style.display = "none";
     secUpdate.style.display = "none";
@@ -53,6 +61,11 @@ btnAddNew?.addEventListener("click", () => {
 });
 
 btnAdded?.addEventListener("click", () => {
+    btnAddNew.style.backgroundColor = "white";
+    btnAdded.style.backgroundColor = "gray";
+    btnUpdate.style.backgroundColor = "white";
+    btnDelete.style.backgroundColor = "white";
+
     secAddNew.style.display = "none";
     secAdded.style.display = "grid";
     secUpdate.style.display = "none";
@@ -60,6 +73,12 @@ btnAdded?.addEventListener("click", () => {
 });
 
 btnUpdate?.addEventListener("click", () => {
+    btnAddNew.style.backgroundColor = "white";
+    btnAdded.style.backgroundColor = "white";
+    btnUpdate.style.backgroundColor = "gray";
+    btnDelete.style.backgroundColor = "white";
+
+
     secAddNew.style.display = "none";
     secAdded.style.display = "none";
     secUpdate.style.display = "grid";
@@ -67,6 +86,12 @@ btnUpdate?.addEventListener("click", () => {
 });
 
 btnDelete?.addEventListener("click", () => {
+    btnAddNew.style.backgroundColor = "white";
+    btnAdded.style.backgroundColor = "white";
+    btnUpdate.style.backgroundColor = "white";
+    btnDelete.style.backgroundColor = "gray";
+
+
     secAddNew.style.display = "none";
     secAdded.style.display = "none";
     secUpdate.style.display = "none";
@@ -129,6 +154,7 @@ let morbtn = document.querySelectorAll(".roomCardMoreBtn");
 
 morbtn.forEach((btn,index)=>{
     btn?.addEventListener("click",()=>{
+        localStorage.setItem("indexOfDetail",JSON.stringify(index));
         window.location.href="./DynamicP.html";
     });
 });
@@ -177,18 +203,14 @@ function updateRoom(i) {
 }
 
 let updateBtn = document.querySelectorAll(".roomCardUpdateBtn");
-let sendIndex;
 
 updateBtn.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        sendIndex = index;
+    btn.addEventListener("click", () =>{
+        localStorage.setItem("updateIndex",JSON.stringify(index));
         window.location.href='test.html';
     });
 });
 
-export function sendUpdateIndex(sendIndex){
-    return sendIndex;
-}
 
 
 // delete sec room
